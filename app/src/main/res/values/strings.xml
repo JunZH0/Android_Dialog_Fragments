@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ActividadUF3_5</string>
+    <string name="item_python">Python</string>
+    <string name="item_java">Java</string>
+    <string name="item_salir">Salir</string>
+    <string name="btn_tam">CAMBIAR TAMAÑO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola Mundo!</string>
+</resources>
