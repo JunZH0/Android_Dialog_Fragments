@@ -1,4 +1,4 @@
-package com.example.actividaduf3_5;
+package com.example.actividaduf3_5.fragments;
 
 import android.os.Bundle;
 
@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.actividaduf3_5.MainActivity;
+import com.example.actividaduf3_5.R;
 
 
 public class PythonFragment extends Fragment {

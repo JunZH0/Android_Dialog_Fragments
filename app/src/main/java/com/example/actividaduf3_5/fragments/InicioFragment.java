@@ -1,4 +1,4 @@
-package com.example.actividaduf3_5;
+package com.example.actividaduf3_5.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
+import com.example.actividaduf3_5.MainActivity;
+import com.example.actividaduf3_5.R;
 
 public class InicioFragment extends Fragment {
 

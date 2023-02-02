@@ -40,6 +40,7 @@ public class DialogoTam extends DialogFragment {
             public void onClick(DialogInterface dialog, int which) {
                 etNum = getDialog().findViewById(R.id.etTam);
                 int tam = Integer.parseInt(etNum.getText().toString());
+                // En principio al poner el input type en el edit text, no haría falta este validar
                 try {
                     if (tam > 0) {
                         Toast.makeText(getActivity(), "Tamaño cambiado a : " + tam, Toast.LENGTH_SHORT).show();

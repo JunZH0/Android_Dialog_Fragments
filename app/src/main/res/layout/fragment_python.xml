@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PythonFragment"
-    android:orientation="vertical">
+    tools:context=".fragments.PythonFragment"
+    android:orientation="vertical"
+    android:id="@+id/frPython">
 
     <TextView
         android:id="@+id/tvPython"
