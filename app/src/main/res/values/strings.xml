@@ -6,4 +6,6 @@
     <string name="btn_tam">CAMBIAR TAMAÑO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hola Mundo!</string>
+    <string name="txtJava">public class HelloWorld{\n\tpublic static void main(String args[]){\n\t\tSystem.out.println("Hola Mundo!");\n\t}\n}</string>
+    <string name="txtPython">#!/usr/bin/env python\n# -*- coding: utf-8 -*-\nprint(\"Hola Mundo!\")</string>
 </resources>

@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InicioFragment"
-    android:orientation="vertical">
+    tools:context=".JavaFragment"
+    android:orientation="vertical"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/tv1"
+        android:id="@+id/tvJava"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/txtJava"
         android:layout_gravity="center"
-        android:textSize="@dimen/txtSize"
-        android:text="@string/hello_blank_fragment" />
+     />
 
 </FrameLayout>

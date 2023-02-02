@@ -2,6 +2,7 @@ package com.example.actividaduf3_5;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -21,11 +22,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, OnDatosListener {
 
-    int tam = 24;
+    public static int TAM = 24;
+
     Button btnCambiarTam;
-    EditText etNumero;
-
-
+    InicioFragment mTextFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btnCambiarTam = findViewById(R.id.btnCambiarTam);
-
-
         btnCambiarTam.setOnClickListener(this);
+
+        initContainer();
+
     }
 
 
@@ -45,12 +46,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
 
+    public void initContainer() {
+        mTextFragment = new InicioFragment();
+        cargarFragment(new InicioFragment());
+    }
+
+    private void cargarFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
+    }
+
+    @Override
+    public void onAceptarDatosListener(int tam) {
+        MainActivity.TAM = tam;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.item_python  ) {
-
+            cargarFragment(new PythonFragment());
         } else if (item.getItemId() == R.id.item_java) {
-
+            cargarFragment(new JavaFragment());
         } else if (item.getItemId() == R.id.item_salir) {
             finish();
         }
@@ -61,12 +76,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.btnCambiarTam) {
             DatosDialogo dialogo = new DatosDialogo();
+            dialogo.setCancelable(false);
             dialogo.show(getSupportFragmentManager(), "Dialogo");
         }
     }
 
-    @Override
-    public void onAceptarDatosListener(int tam) {
-        this.tam = tam;
-    }
+
 }
