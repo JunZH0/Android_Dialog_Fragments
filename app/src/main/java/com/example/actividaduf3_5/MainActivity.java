@@ -1,24 +1,16 @@
 package com.example.actividaduf3_5;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.annotation.SuppressLint;
-import android.app.Dialog;
-import android.content.ComponentName;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.actividaduf3_5.dialogos.DialogoSalir;
+import com.example.actividaduf3_5.dialogos.DialogoTam;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, OnDatosListener {
 
@@ -67,7 +59,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (item.getItemId() == R.id.item_java) {
             cargarFragment(new JavaFragment());
         } else if (item.getItemId() == R.id.item_salir) {
-            finish();
+            DialogoSalir dialogoSalir = new DialogoSalir();
+            dialogoSalir.setCancelable(false);
+            dialogoSalir.show(getSupportFragmentManager(), "Dialogo salida");
         }
         return super.onOptionsItemSelected(item);
     }
@@ -75,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btnCambiarTam) {
-            DatosDialogo dialogo = new DatosDialogo();
+            DialogoTam dialogo = new DialogoTam();
             dialogo.setCancelable(false);
             dialogo.show(getSupportFragmentManager(), "Dialogo");
         }

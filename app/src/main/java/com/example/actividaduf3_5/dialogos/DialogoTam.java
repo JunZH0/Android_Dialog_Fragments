@@ -1,6 +1,5 @@
-package com.example.actividaduf3_5;
+package com.example.actividaduf3_5.dialogos;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -13,8 +12,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.actividaduf3_5.OnDatosListener;
+import com.example.actividaduf3_5.R;
 
-public class DatosDialogo extends DialogFragment {
+
+public class DialogoTam extends DialogFragment {
 
     OnDatosListener listener;
     EditText etNum;
